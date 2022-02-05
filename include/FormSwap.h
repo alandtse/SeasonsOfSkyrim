@@ -154,7 +154,7 @@ namespace FormSwap
 
 	inline void Install()
 	{
-		REL::Relocation<std::uintptr_t> model_loader_queue_ref{ REL::ID(12910) };
+		REL::Relocation<std::uintptr_t> model_loader_queue_ref{ REL::ID(13057) };
 		stl::write_thunk_call<GetHandle>(model_loader_queue_ref.address() + 0x3E);
 
 		stl::write_vfunc<RE::TESObjectREFR, Load3D>();

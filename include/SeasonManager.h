@@ -80,10 +80,10 @@ protected:
 
 		static void Install()
 		{
-			REL::Relocation<std::uintptr_t> load_interior{ REL::ID(13171), 0x2E6 };
+			REL::Relocation<std::uintptr_t> load_interior{ REL::ID(13316), 0x46D };
 			stl::write_thunk_call<SetInterior>(load_interior.address());
 
-			REL::Relocation<std::uintptr_t> leave_interior{ REL::ID(13172), 0x2A };
+			REL::Relocation<std::uintptr_t> leave_interior{ REL::ID(13317), 0x1E };
 			stl::write_thunk_call<SetInterior>(leave_interior.address());
 
 			logger::info("Installed interior-exterior detection"sv);

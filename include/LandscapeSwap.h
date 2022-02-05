@@ -45,7 +45,7 @@ namespace LandscapeSwap
 			}
 
 			static inline size_t size = 0x5;
-			static inline std::uint64_t id = 18414;
+			static inline std::uint64_t id = 18845;
 		};
 	}
 
@@ -65,15 +65,15 @@ namespace LandscapeSwap
 			}
 
 			static inline size_t size = 0xE;
-			static inline std::uint64_t id = 18418;
+			static inline std::uint64_t id = 18849;
 		};
 	}
 
 	inline void Install()
 	{
-		REL::Relocation<std::uintptr_t> create_land_geometry{ REL::ID(18368) };
-		stl::write_thunk_call<Texture::GetAsShaderTextureSet>(create_land_geometry.address() + 0x172);
-		stl::write_thunk_call<Texture::GetAsShaderTextureSet>(create_land_geometry.address() + 0x18B);
+		REL::Relocation<std::uintptr_t> create_land_geometry{ REL::ID(18791) };
+		stl::write_thunk_call<Texture::GetAsShaderTextureSet>(create_land_geometry.address() + 0x174);
+		stl::write_thunk_call<Texture::GetAsShaderTextureSet>(create_land_geometry.address() + 0x18D);
 		stl::write_thunk_call<Texture::GetAsShaderTextureSet>(create_land_geometry.address() + 0x1E6);
 
 	    stl::asm_replace<Grass::GetGrassList>();
